@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+/*Navbar styles*/
+.navbar {
+    background-color: #343a40;
+    color: #343a40;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar__item {
+    display: inline-block;
+    margin: 0 12px;
+    padding: 5px 10px;
+    color: inherit;
+    background-color: #f8f9fa;
+    border-radius: 3px;
+}
+
+.navbar__item :visited {
+    color: inherit; 
+}
+
+.navbar__link {
+    text-decoration: none;
+    background-color: none;
+}
+/*Container styles*/
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.container__section {
+    margin-bottom:100px ;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.title--principal {
+    font-size: 2em;
+}
+
+.section__description {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.section__list {
+    margin-bottom: 30px;
+}
+/*Form styles*/
+.section__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 15px;
+}
+
+.form__line {
+    display:flex;
+    justify-content: center;
+    font-size: inherit;
+    margin: 10px;
+}
+
+.form__group {
+    display: inline-flex;
+    flex: 1;
+    align-items: center;
+    font-size: inherit;
+}
+
+.form__addon {
+    padding: 3px;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.form__input {
+    flex: 1;
+    margin-right: 0;
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 0rem;
+    font-size: 30px;
+}
+
+.form__select {
+    flex: 2;
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-size: 30px;
+}
+
+.select--parameter {
+    flex: 0;
+    padding: 5px;
+    border: 1px solid  #ced4da;
+    border-radius: 0.25rem;
+    font-size: 18px;
+}
+
+.form__results {
+    font-size: 35px;
+}
+
+/*Fotter styles*/
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

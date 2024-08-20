@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" class="bg-gray-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans">
+    <!-- Navegación -->
+    <header class="bg-blue-600 text-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <ul class="flex space-x-4">
+                <li><a class="hover:text-blue-200" href="#">Inicio</a></li>
+                <li><a class="hover:text-blue-200" href="#">Indicadores</a></li>
+                <li><a class="hover:text-blue-200" href="#">Acerca de</a></li>
+                <li><a class="hover:text-blue-200" href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Formulario 1 -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h1 class="text-3xl font-bold mb-4 text-blue-800">Calculadora de inflación histórica de Argentina</h1>
+            <p class="mb-4 text-gray-700">
+                Los precios históricos pueden ser ajustados a los precios actuales utilizando datos de índices de inflación históricos. Utiliza la calculadora a continuación para convertir precios entre cualquier mes desde enero de 1992 (cuando fue introducido el Peso) y el mes presente.
+            </p>
+            <h2 class="text-2xl font-semibold mb-2 text-blue-700">Uso</h2>
+            <ol class="list-decimal list-inside mb-4 text-gray-700">
+                <li>Ingresar un valor inicial.</li>
+                <li>Ingresar fecha inicial. El cálculo del mes inicial es al primer día de ese mes.</li>
+                <li>Ingresar fecha final. El cálculo del mes final es al último día de ese mes.</li>
+            </ol>
+            <form class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <span class="text-gray-700">Selecciona el parámetro:</span>
+                    <select class="border rounded px-2 py-1" name="parameter">
+                        <option value="inflacio">Inflación(IPC)</option>
+                        <option value="dolar_oficial">Dolar oficial</option>
+                        <option value="dolar_paralelo">Dolar blue</option>
+                    </select>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <div class="flex items-center">
+                        <span class="text-gray-700 mr-2">$</span>
+                        <input class="border rounded px-2 py-1" type="number" name="amount" value="100">
+                    </div>
+                    <span class="text-gray-700">en</span>
+                    <select class="border rounded px-2 py-1" name="from-month">
+                        <!-- Opciones de meses -->
+                    </select>
+                    <span class="text-gray-700">de</span>
+                    <select class="border rounded px-2 py-1" name="from-year">
+                        <!-- Opciones de años -->
+                    </select>
+                </div>
+                <div class="text-gray-700">Equivalen a</div>
+                <div class="flex items-center space-x-2">
+                    <div class="flex items-center">
+                        <span class="text-gray-700 mr-2">$</span>
+                        <input class="border rounded px-2 py-1 bg-gray-100" type="number" name="amount" value="100" readonly>
+                    </div>
+                    <span class="text-gray-700">en</span>
+                    <select class="border rounded px-2 py-1" name="to-month">
+                        <!-- Opciones de meses -->
+                    </select>
+                    <span class="text-gray-700">de</span>
+                    <select class="border rounded px-2 py-1" name="to-year">
+                        <!-- Opciones de años -->
+                    </select>
+                </div>
+                <div class="text-blue-600 font-semibold">Inflación acumulada = %</div>
+                <div class="text-blue-600 font-semibold">Promedio mensual = %</div>
+                <div class="text-blue-600 font-semibold">Promedio anual = %</div>
+            </form>
+        </section>
+
+        <!-- Formulario 2 -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h1 class="text-3xl font-bold mb-4 text-blue-800">Comparar 2 precios ajustados por inflación</h1>
+            <p class="mb-4 text-gray-700">
+                Es crucial saber si un producto o servicio aumenta más o menos que la inflación. Cuando el aumento supera la inflación, el poder adquisitivo disminuye; si es menor, aumenta. Esto nos ayuda a entender cómo los cambios en los precios impactan nuestra capacidad de compra y a tomar decisiones financieras más informadas.
+            </p>
+            <h2 class="text-2xl font-semibold mb-2 text-blue-700">Uso</h2>
+            <ol class="list-decimal list-inside mb-4 text-gray-700">
+                <li>Ingresar el primer valor a comparar y la fecha a la que pertenece</li>
+                <li>Ingresar el segundo valor a comparar y la fecha a la que pertenece.</li>
+            </ol>
+            <form class="space-y-4">
+                <!-- Contenido del formulario 2 similar al formulario 1 -->
+            </form>
+        </section>
+
+        <!-- Preguntas -->
+        <section class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-800">¿Qué es la Inflación?</h2>
+            <p class="mb-4 text-gray-700">
+                La inflación es el aumento generalizado y sostenido de los precios durante un determinado período de tiempo.
+                Cuando los precios suben, la moneda en curso pierde valor y se adquieren menos bienes y servicios.
+                Esto quiere decir que la inflación refleja la disminución del poder adquisitivo de la moneda.
+            </p>
+            <p class="mb-4 text-gray-700">
+                Los efectos de la inflación pueden ser positivos y negativos.
+                Los efectos negativos de la inflación incluyen la disminución del valor de la moneda y el desaliento del ahorro e inversión debido a la incertidumbre sobre el valor futuro del dinero.
+                Los efectos positivos de la inflación incluyen la posibilidad de los bancos centrales de ajustar las tasas de interés nominal con el propósito de mitigar una recesión y de fomentar la inversión en proyectos de capital no monetarios.
+            </p>
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">Fuente de datos</h3>
+            <p class="text-gray-700">
+                La calculadora usa el índice de precios al consumidor (IPC) del INDEC y las cotizaciones históricas del dolar oficial y paralelo de <a href="http://dolarhistorico.com" target="_blank" class="text-blue-600 hover:underline">dolarhistorico.com</a>.
+            </p>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Indicadores Económicos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
